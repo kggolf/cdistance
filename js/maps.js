@@ -65,7 +65,7 @@ function getCurrentLocation() {
         {timeout: 5000, enableHighAccuracy: true}
     );
   }else{
-    //alert('no geolocalizator');
+    showErrors('This Browser doesn\'t use geolocalizator');
     showLocationInfo('Amsterdam', true);
   }
 }
