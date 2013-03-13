@@ -1,4 +1,6 @@
 var cookies_container = $('#cookies');
+var cookies;
+
 function initCookie(){
   if(getCookieLength()>0){
     cookies_container.html('');
