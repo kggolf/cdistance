@@ -64,6 +64,8 @@ function getCurrentLocation() {
         geoHandleError,
         {timeout: 5000, enableHighAccuracy: true}
     );
+  }else{
+    alert('no geolocalizator');
   }
 }
 
