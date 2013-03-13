@@ -1,8 +1,5 @@
 var cookies_container = $('#cookies');
-alert(document.cookie);
 function initCookie(){
-  cookies = document.cookie;
-  cookies = cookies.split('; ');
   if(getCookieLength()>0){
     cookies_container.html('');
   }
