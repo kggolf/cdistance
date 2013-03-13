@@ -159,6 +159,9 @@ input {
   font-size: 12px;
   margin: 0;
 }
+.ie7 #cookies {
+  width: 98%;
+}
 #cookies {
   display: none;
   padding: 2px 1% 5px;
