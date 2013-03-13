@@ -39,7 +39,6 @@ body > section.container {
 .ie7 body > section.container,
 .ie8 body > section.container {
   padding-top: 70px;
-  float: left;
 }
 footer.container-fluid {
   border: 1px solid #cccccc;
