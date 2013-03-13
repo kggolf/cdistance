@@ -27,10 +27,7 @@ $(function(){
   getCurrentLocation();
 
   /** Clear inputs on dbclick **/
-  $('#destination_input').on('dblclick', function(){
-    $(this).val('');
-  });
-  $('#keyword').on('dblclick', function(){
+  $('input').on('dblclick', function(){
     $(this).val('');
   });
 
@@ -76,11 +73,11 @@ function getCurrentLocation() {
  */
 function geoHandleError(err) {
   noGeoContainer.show();
-  initializeMap();
+  showLocationInfo('Amsterdam', true);
 
   // We could Personalized messages for different cases
   if (err.code == 1) {
-    messages = 'Not Recognized';
+    messages = 'Geolocalization not accepted by the user';
   }
   if (err.code == 2) {
     messages = 'Share location wasn\'t allowed';
