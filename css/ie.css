@@ -1,0 +1,9 @@
+footer,.breadcrumb,input,.btn{
+  position: relative;
+  behavior: url(PIE.htc);
+}
+
+footer {
+  padding: 0;
+  margin: 0;
+}

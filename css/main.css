@@ -1,0 +1,87 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+body {
+  background: #eeeeee;
+}
+a:hover {
+  text-decoration: none;
+}
+.breadcrumb {
+  -webkit-box-shadow: 1px 1px 3px #cccccc;
+  -moz-box-shadow: 1px 1px 3px #cccccc;
+  box-shadow: 1px 1px 3px #cccccc;
+}
+form {
+  margin: 0;
+}
+nav.container ul {
+  list-style: none;
+  float: left;
+  height: 40px;
+  padding-bottom: 20px;
+}
+nav.container ul li {
+  float: left;
+  padding: 0 10px;
+  line-height: 80px;
+}
+#logo {
+  float: left;
+  padding-top: 15px;
+}
+body > section.container {
+  padding-bottom: 70px;
+}
+footer.container-fluid {
+  border: 1px solid #cccccc;
+  border-bottom: none;
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  float: left;
+  padding: 10px;
+}
+.copyright {
+  float: right;
+  text-shadow: 1px 1px 1px #ffffff;
+  color: #666666;
+}
+.btn.reset {
+  font-size: 12px;
+  float: right;
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  input {
+    max-width: 120px;
+  }
+}
+@media (max-width: 767px) {
+  section.searcher input {
+    margin-bottom: 10px;
+  }
+  footer.container-fluid {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #cccccc;
+    position: relative;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+}
+@media (min-width: 979px) {
+  body > .container {
+    padding-top: 80px;
+  }
+}

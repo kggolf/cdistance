@@ -1,0 +1,96 @@
+@import "elements.less";
+
+body{
+  background: @background;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.breadcrumb {
+  .box-shadow(@box-shadow);
+}
+
+form {
+  margin: 0;
+}
+
+nav.container ul {
+  list-style: none;
+  float: left;
+  height: 40px;
+  padding-bottom: 20px;
+}
+
+nav.container ul li {
+  float: left;
+  padding: 0 10px;
+  line-height: 80px;
+}
+
+#logo {
+  float: left;
+  padding-top: 15px;
+}
+
+body>section.container {
+  padding-bottom: 70px;
+}
+
+footer.container-fluid {
+  border: @border;
+  border-bottom: none;
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+footer{
+  ul {
+    list-style: none;
+      li {
+        float: left;
+        padding: 10px;
+      }
+  }
+}
+
+.copyright {
+  float: right;
+  text-shadow: @text-shadow;
+  color: @color;
+}
+
+.btn.reset{
+  font-size: 12px;
+  float: right;
+}
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+  input {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 767px) {
+  section.searcher input{
+    margin-bottom: 10px;
+  }
+  footer.container-fluid {
+    margin-bottom: 10px;
+    border-bottom: @border;
+    position: relative;
+    .rounded;
+  }
+}
+
+@media (min-width: 979px) {
+  body>.container {
+    padding-top: 80px;
+  }
+}

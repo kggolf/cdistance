@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+  <!-- Enable this line for testing for explorer -->
+  <!--     <script type='text/javascript' src='http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js'></script> -->
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+         Remove this if you use the .htaccess -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Calculate your distance</title>
+    <meta name="description" content="description of the app" />
+    <meta name="author" content="Ismael ZigelBaum">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/favicon.ico" />
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+      <!-- Instead of using CSS for Explorer we added a class saying which ie we are using on the HTML tag. -->
+      <!--
+      Other solution could be use something like
+       -->
+
+       <!--[if gte IE 9]>
+         <link rel="stylesheet" type="text/css" href="/static/css/ie9.css">
+       <![endif]-->
+
+       <!--[if IE]>
+         <link rel="stylesheet" type="text/css" href="/static/css/ie.css">
+       <![endif]-->
+
+    <script type="text/javascript" src="js/libs/modernizr-2.0.min.js"></script>
+  </head>
+  <body>
+    <header class="navbar navbar-fixed-top">
+
+      <!-- Principal Menu -->
+      <div class="navbar-inner">
+        <nav class="container">
+          <a href="/" id="logo">
+            <img src="images/logo.png" />
+          </a>
+
+          <ul>
+            <li>
+              <a href="">Link1</a>
+            </li>
+            <li>
+              <a href="">Link2</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="container">
+      <h1>Calculate the distance from your Location!</h1>
+      <div class="row-fluid">
+        <div class="span6">
+          <div id="no_geo">
+            <span>
+              <img src="images/preloader.gif" class="preload"/>HTML5 Geolocalizator initializing
+            </span>
+          </div>
+          <div id="map_canvas">
+          </div>
+        </div>
+
+        <ul class="span6">
+          <li>
+            <div id="location">
+              <label>Your location is: </label>
+              <span id="my_address"></span>
+              <input type="hidden" id="location_hidden"/>
+              <br/>
+
+              <div class="opener">
+                 <a href="#" class="door" title="You can change your Current Location">
+                  <span></span> change Location
+                </a>
+                <div id="location_not_found">
+                  <label>Set your current location:</label>
+                  <input type="text" name="location" id="keyword"/>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li id="no_location">No location found</li>
+          <li id="destination">
+            <label>Select Destination</label>
+            <input type="text" name="destination_input" class="address_input" id="destination_input" size="40" />
+            <div class="aclaration">* Dbclick to clear the field</div>
+
+            <div id="distance_direct"></div>
+            <div id="distance_road"></div>
+
+            <div class="opener">
+              <a class="door" href="#" title="You can check & select again your last dastinations">
+                <span></span> Show Last Destinations
+              </a>
+              <ul id="cookies">
+                No previous destinations
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <section>
+        <div class="opener help">
+          <a class="door" href="#" title="Explanation of what you can do in this app">
+            <span></span> Features. Possibilities of this App.
+          </a>
+          <ul>
+            <li><b>Markers</b> can be dragged (from the map) to define a new location (<b>Current location and Destination</b>).</li>
+            <li>You can use the input field to get an <b>autocomplete</b> dropdown from google (<b>current location and destination</b>).</li>
+            <li>Current position can be defined or changed by <b>dragging</b> the marker or <b>typing</b> in the field.</li>
+            <li><b>Last destinations</b> selected can be shown and re loaded.</li>
+            <li><b>Infowindow</b> (in the map) can be shown when clicking the <b>markers</b>.</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+
+    <footer class="container-fluid">
+      <ul class="container">
+        <li><a href="#" >Contact</a></li>
+        <li><a href="#" >About us</a></li>
+        <li><a href="#" >FAQ</a></li>
+        <li><a href="#" >Help</a></li>
+        <li class="copyright">CalculateDistance 2013 &copy;</li>
+      </ul>
+    </footer>
+
+    <!-- JS loaded at the end of the document -->
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&language=en"></script>
+    <script type="text/javascript" src="js/libs/jquery.cookies.js"></script>
+    <script type="text/javascript" src="js/cookies.js"></script>
+    <script type="text/javascript" src="js/maps.js"></script>
+  </body>
+</html>
+
